@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobs.HttpTrigger1.Disabled": "true",
+    "cloudshell1751944272_STORAGE": "DefaultEndpointsProtocol=https;AccountName=cloudshell1751944272;AccountKey=K794XcE1SyS5dxwF4cCZH4Sd6JO4kzxHmRZ9XlHgZa+0WbXNvBCU9FzQp2z9P3NanW2wooyI9UojxuywiMg4Ww==;EndpointSuffix=core.windows.net",
+    "AzureWebJobs.HttpTrigger12.Disabled": "true",
+    "AzureWebJobs.BlobTrigger1.Disabled": "true",
+    "storageaccountlearna690_STORAGE": "DefaultEndpointsProtocol=https;AccountName=storageaccountlearna690;AccountKey=iUgUH7er+vodfvhIwXTNh7tab20V/ItSWvBnXR3fzmWuBlwkDfzLVRAhTYY2U8jBcbFNl0Elt8tPp54U2ta2mg==;EndpointSuffix=core.windows.net",
+    "AzureWebJobs.TimerTrigger1.Disabled": "true",
+    "storageaccountlearnbbfb_STORAGE": "DefaultEndpointsProtocol=https;AccountName=storageaccountlearnbbfb;AccountKey=eNwT6qeHgD1r9ZElj+AJc5YYedjE1OMGoyNfe2zNJaBz78B0+IqNcqi5Y5TKoy17p0WbZDMbMl9jpvnBxDicbQ==;EndpointSuffix=core.windows.net"
+  }
+}
