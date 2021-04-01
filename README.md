@@ -10,7 +10,7 @@ Building a serverless leukemia classifier using Azure Functions and Logic Apps.
 5. Mailjet
 6. Azure Devops
 
-![screenshot](/image/resources-group-1.JPG)
+![screenshot](/images/resources-group-1.JPG)
 
 ## 1. Azure Function
 
@@ -18,15 +18,15 @@ Building a serverless leukemia classifier using Azure Functions and Logic Apps.
 - StaticPage -> present the index page our application
 
 
-![screenshot](/image/function-1.JPG)
+![screenshot](/images/function-1.JPG)
 
 ## 2. Logic Apps
 
 - Used to trigger the Azure function if a change is made to blob storage 
 
-![screenshot](/image/logic-apps-1.JPG)
+![screenshot](/images/logic-apps-1.JPG)
 
-![screenshot](/image/logic-apps-2.JPG)
+![screenshot](/images/logic-apps-2.JPG)
 
 ## 3. Cosmos DB
 
@@ -55,22 +55,22 @@ example item stored in Cosmos DB
     }
 }
 
-![screenshot](/image/cosmosdb-1.JPG)
+![screenshot](/images/cosmosdb-1.JPG)
 
 ## 4. Blob Storage
 
 - To store the lab reports (microscopic blood sample images)
 
-![screenshot](/image/blob-storage-1.JPG)
+![screenshot](/images/blob-storage-1.JPG)
 
 ## 5. Mailjet
 
 - Using SMTP relay in logic apps and API in Azure Functions to send out the mails to patients and hematologists
 
-![screenshot](/image/mailject-1.JPG)
+![screenshot](/images/mailject-1.JPG)
 
 ## 6. Azure Devops
 
 - Create a issue work item if the prediction is wrong or misclassified by our custom ML model.
 
-![screenshot](/image/devops-1.JPG)
+![screenshot](/imagesdevops-1.JPG)
