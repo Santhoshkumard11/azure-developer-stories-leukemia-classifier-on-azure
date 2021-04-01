@@ -1,4 +1,4 @@
-# Azure Dev Stories-leukemia-classifier-on-azure
+# Azure Dev Stories - Leukemia Classifier on Azure Cloud
 Building a serverless leukemia classifier using Azure Functions and Logic Apps.
 
 #azuredevstories

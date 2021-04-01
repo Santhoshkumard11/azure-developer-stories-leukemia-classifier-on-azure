@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portal - Leukemia Classifier</title>
+    <title>Santhosh - Leukemia Classifier</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,14 +23,21 @@
         font-size: 2rem;
       }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+    
+    <!-- Added for toast message -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body style="background-color: #c4d7ec">
     <div id="app">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #3c91e6 !important;">
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
+        style="background-color: #3c91e6 !important"
+      >
         <div class="container">
           <span class="navbar-brand">Leukemia Classifier - Santhosh</span>
           <span class="navbar-brand">Let's make life better</span>
@@ -52,34 +59,135 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="row">Fetching data......</th>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <script>
-      setInterval(fetchResult, 1000);
+    <!-- Toast Message -->
+  <div aria-live="assertive" role="alert" aria-atomic="true" style="position: relative; min-height: 200px;" >
+  <div class="toast" style="position: absolute; top: 0; right: 0;" data-autohide="false">
+    <div class="toast-header">
+      <strong class="mr-auto">Updated the table!!!  </strong>
+      <small>1 sec ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Retrieving Data from Cosmos DB
+    </div>
+  </div>
+</div>
 
-      var fetchResult = () => {
-        $("tbody").empty();
+<footer class="bg-light text-center" style="bottom:0;position: absolute;height: 250px;width:100%;line-height:60px">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <h2>Follow on</h2>  
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Linkedin -->
+      <a
+        class="m-2"
+        style="color: #0082ca; !important font-size:250%"
+        href="https://www.linkedin.com/in/santhosh-kumar-dhanasekaran-85a89b131/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BbS9m9GheTFCMMCrSyWYkfQ%3D%3D"
+        target="_blank"
+        role="button"
+        >
+        <i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:250%"></i>
+        </a>
+      <!-- Github -->
+      <a
+        class="m-2"
+        style="color: #333333; !important font-size:250%"
+        href="https://github.com/Santhoshkumard11/azure-developer-stories-leukemia-classifier-on-azure"
+        target="_blank"
+        role="button"
+        ><i class="fa fa-github-square" aria-hidden="true" style="font-size:250%"></i>
+      </a>
 
+      <!-- Medium -->
+      <a
+        class="m-2"
+        style="color: #3b5998; !important"
+        href="https://santhoshkdhana.medium.com/"
+        target="_blank"
+        role="button"
+        ><i class="fa fa-medium" aria-hidden="true" style="font-size:250%"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="m-2"
+        style="color: #55acee; !important"
+        href="https://twitter.com/santhos12551"
+        target="_blank"
+        role="button"
+        ><i class="fa fa-twitter-square" style="font-size:250%"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="m-2"
+        style="color: #ac2bac; !important"
+        href="https://www.instagram.com/santhoshgoku/"
+        target="_blank"
+        role="button"
+        ><i class="fa fa-instagram" style="font-size:250%"></i
+      ></a>
+
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+      <div class="" style="background-color: #c0d7ee">
+        <span class="text-dark">
+          © 2021 Copyright 
+        </span>
+        <a class="text-dark" href="https://github.com/Santhoshkumard11"
+        >SanthoshAzureDemo</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    
+    <script type="application/javascript">
+      $(document).ready(function() {
+        
+        console.log("Started fetching the data....");
+        
+        var count = 0;
+
+        function fetchResult() {
+          // limiting the function call to 10
+          if (count > 10) {
+          //return;
+          console.log("limit reached...");
+        }
+        
+        // fetch the data from the database
         fetch(
           "https://santhoshleukemiaclassifer.azurewebsites.net/api/getcosmosdb-data"
         )
-          .then((response) => response.json())
-          .then((data) => {
+        .then((response) => response.json())
+        .then((data) => {
+            // log the response from the database
+            console.log("Receiving data...")
             console.log(data);
+            
+            // clear out the existing table data
+            $("tbody").empty();
 
+            // appending all the data to the table
             for (var i = 0; i < data.length; i++) {
               let template = `
               <tr>
-              <th scope="col">${data[i].id}</th>
-              <th scope="col">${data[i].patient_details.patient_name}</th>
+                <th scope="col">${data[i].id}</th>
+                <th scope="col">${data[i].patient_details.patient_name}</th>
               <th scope="col">${data[i].patient_details.Age}</th>
               <th scope="col">${data[i].detection_results.predicted_type}</th>
               <th scope="col">${data[i].physicians_results.hematologists1}</th>
@@ -87,11 +195,22 @@
               <th scope="col">${data[i].physicians_results.chief_hematologists}</th>
             </tr>
             `;
-
-              $("tbody").append(template);
-            }
-          });
+            
+            // Add the new data to the table
+            $("tbody").append(template);
+          }
+        })
+        .catch(error => console.log(error) );
+        count += 1;
       };
-    </script>
-  </body>
+      
+      
+      // calling the fetchResullt function for every second
+      setInterval(fetchResult, 1000);
+    });
+    
+    $('.toast').toast("show");
+
+  </script>
+</body>
 </html>
