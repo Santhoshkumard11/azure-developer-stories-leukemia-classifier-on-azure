@@ -1,6 +1,7 @@
-# azure-developer-stories-leukemia-classifier-on-azure
+# Azure Dev Stories-leukemia-classifier-on-azure
 Building a serverless leukemia classifier using Azure Functions and Logic Apps.
 
+#azuredevstories
 
 ## List of services used
 1. Azure function
@@ -10,7 +11,7 @@ Building a serverless leukemia classifier using Azure Functions and Logic Apps.
 5. Mailjet
 6. Azure Devops
 
-![screenshot](/images/resources-group.JPG)
+![screenshot](/images/resource-group.JPG)
 
 ## 1. Azure Function
 
