@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portal - Leukemia Classifier</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/9e7e33d92a.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        min-height: 75rem;
+        padding-top: 100px;
+      }
+      .navbar-brand {
+        font-size: 2rem;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #3c91e6 !important;">
+        <div class="container">
+          <span class="navbar-brand">Leukemia Classifier - Santhosh</span>
+          <span class="navbar-brand">Let's make life better</span>
+        </div>
+      </nav>
+
+      <div class="container">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Patient Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Predicted Type</th>
+              <th scope="col">Hematologists 1</th>
+              <th scope="col">Hematologists 1</th>
+              <th scope="col">Chief Hematologist</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      setInterval(fetchResult, 100);
+
+      var fetchResult = () => {
+        $("tbody").empty();
+
+        fetch(
+          "https://santhoshleukemiaclassifer.azurewebsites.net/api/getcosmosdb-data"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+
+            for (var i = 0; i < data.length; i++) {
+              let template = `
+              <tr>
+              <th scope="col">${data[i].id}</th>
+              <th scope="col">${data[i].patient_details.patient_name}</th>
+              <th scope="col">${data[i].patient_details.Age}</th>
+              <th scope="col">${data[i].detection_results.predicted_type}</th>
+              <th scope="col">${data[i].physicians_results.hematologists1}</th>
+              <th scope="col">${data[i].physicians_results.hematologists2}</th>
+              <th scope="col">${data[i].physicians_results.chief_hematologists}</th>
+            </tr>
+            `;
+
+              $("tbody").append(template);
+            }
+          });
+      };
+    </script>
+  </body>
+</html>
