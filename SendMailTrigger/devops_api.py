@@ -3,7 +3,7 @@ import requests
 import logging
 
 # See link down below to generate your Private Access Token
-AZURE_DEVOPS_PAT = 'yjimnwnt2qftgjb5dripkmpokxyh4quuelujltl3jaypqpahclra'
+AZURE_DEVOPS_PAT = 'YOUR PAT'
 url = 'https://dev.azure.com/santhoshkdhana/Leukemia Classification/_apis/wit/workitems/$issue?api-version=5.1'
 
 
