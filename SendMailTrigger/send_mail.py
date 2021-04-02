@@ -1,8 +1,8 @@
 import logging
 from mailjet_rest import Client
 
-api_key = 'b0c0da5d8f5e215c5499dc644a98e93a'
-api_secret = '85a8d2afcf895ef72d176e9395ea30f9'
+api_key = 'YOUR API KEY'
+api_secret = 'YOUR API SECRET'
 mailjet = Client(auth=(api_key, api_secret), version='v3.1')
 
 def send_email(patient_name:str, mail_type = "doc", leukemia_type = "no"):
