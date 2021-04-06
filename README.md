@@ -5,11 +5,11 @@ Building a serverless leukemia classifier using Azure Functions and Logic Apps.
 
 ![azureporatgif](/images/azure-portal-gif.gif)
 
-## YouTube Demo Video
+## YouTube Demo Video 📺📺
 
 https://youtu.be/6cub1Ifr6Wg
 
-## Medium Blog
+## Medium Blog 📑📑
 
 Link -> [Trigger Based Leukemia Classifier on Azure Cloud — Prediction and Reporting](https://santhoshkdhana.medium.com/trigger-based-leukemia-classifier-on-azure-cloud-prediction-and-reporting-6a1069b6406f)
 
