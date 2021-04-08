@@ -13,6 +13,10 @@ https://youtu.be/6cub1Ifr6Wg
 
 Link -> [Trigger Based Leukemia Classifier on Azure Cloud — Prediction and Reporting](https://santhoshkdhana.medium.com/trigger-based-leukemia-classifier-on-azure-cloud-prediction-and-reporting-6a1069b6406f)
 
+## Flow Diagram 🥏🥏
+
+![azureflowchart](/images/flow-chart.JPG)
+
 ## List of services used
 1. Azure function
 2. Logic Apps
