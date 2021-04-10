@@ -17,7 +17,7 @@ Link -> [Trigger Based Leukemia Classifier on Azure Cloud — Prediction and Rep
 
 ![azureflowchart](/images/flow-chart.JPG)
 
-## List of services used
+## List of services used ⚙
 1. Azure function
 2. Logic Apps
 3. Cosmos DB
