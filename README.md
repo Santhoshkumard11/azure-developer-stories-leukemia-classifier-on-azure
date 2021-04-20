@@ -67,3 +67,8 @@ Link -> [Trigger Based Leukemia Classifier on Azure Cloud — Prediction and Rep
 - Create a issue work item if the prediction is wrong or misclassified by our custom ML model.
 
 ![screenshot](/images/devops-1.JPG)
+
+
+## Files
+
+
