@@ -38,7 +38,7 @@ numpy==1.15.3
 opencv-python==3.4.9.33
 Pillow==6.0.0
 protobuf==3.9.2
-py==1.7.0
+py==1.10.0
 pycodestyle==2.4.0
 Pygments==2.3.0
 pylint==2.1.1
